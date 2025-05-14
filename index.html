@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Помощь людям с ОВЗ</title>
+  <link rel="stylesheet" href="style.css" />
+   <button id="pauseButton" onclick="togglePause()">❚❚ Пауза</button>
+  <style>
+  /* Стиль для кнопки */
+  #pauseButton {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    padding: 10px 20px;
+    background-color:rgb(255, 255, 255);
+    color: black;
+    font-size: 2em;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  #pauseButton:hover {
+    background-color: #ffaa33;
+  }
+</style>
+</head>
+<body>
+
+  <!-- Хедер -->
+  <header class="header">
+    <div class="container header-content">
+      <div class="header-left">
+        <h1>Помощь людям с ограниченными возможностями здоровья</h1>
+        <button id="openModal">Попросить помощи</button>
+      </div>
+      <div class="header-right">
+        <img src="image 1 (1).png" alt="Помощь">
+      </div>
+    </div>
+  </header>
+
+  <!-- Главное меню -->
+  <section class="main-menu">
+    <div class="container">
+      <ul>
+        <li><a href="#services">Услуги</a></li>
+        <li><a href="#about">О нас</a></li>
+        <li><a href="#documents">Документы</a></li>
+        <li><a href="#contact">Контакты</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Контакты -->
+  <section id="contact" class="contact">
+    <p class="question">Вам или вашим близким нужна помощь?</p>
+    <p>
+      Оставьте заявку или позвоните по телефону <strong>555-89</strong>, и наша команда предоставит вам все необходимые услуги<br>
+      <strong>БЕСПЛАТНО</strong>
+    </p>
+  </section>
+
+  <!-- Услуги -->
+  <section id="services" class="services">
+    <h2>Наши услуги</h2>
+    <div class="service-list">
+      <div class="service">
+        <div class="circle">
+          <img src="image 2.png" alt="Перевозка">
+        </div>
+        <p>Перевозка маломобильных пациентов</p>
+      </div>
+      <div class="service">
+        <div class="circle">
+          <img src="image 3.png" alt="Оборудование">
+        </div>
+        <p>Предоставление необходимого оборудования</p>
+      </div>
+      <div class="service">
+        <div class="circle">
+          <img src="image 4.png" alt="Сбор">
+        </div>
+        <p>Открытие денежных сборов</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- О нас -->
+  <section id="about" class="about">
+    <h2>О нас</h2>
+    <p>
+      Мы команда волонтеров, готовых прийти на помощь людям<br>
+      с ограниченными возможностями здоровья и их семьям.<br>
+      В нашей команде замечательные специалисты:<br>
+      - Психологи<br>
+      - Юристы<br>
+      - Врачи<br>
+      - Водители скорой помощи<br>
+      - Сотрудники центра "Добрая воля"<br>
+      Эти замечательные специалисты и люди с большим сердцем готовы помочь каждому бесплатно.
+    </p>
+    <img src="image 5.png" alt="Сердце - помощь">
+  </section>
+
+  <!-- Документы -->
+  <section id="documents" class="documents">
+    <h2>Перечень документов для получения бесплатных услуг</h2>
+    <ul>
+      <p>-Документ, подтверждающий статус инвалида</p>
+      <p>-Ксерокопия документа, подтверждающего личность (паспорт или свидетельство о рождении и паспорт родителя или опекуна)</p>
+      <p>-Ксерокопия СНИЛС</p>
+      <p>-Ксерокопия полиса ОМС</p>
+      <li class="note">*В случае необходимости может понадобиться ваше личное присутствие с оригиналами документов или присутствие доверенного лица.</li>
+    </ul>
+  </section>
+
+  <!-- Футер -->
+  <footer>
+    <p>Адрес: г.Новомосковск, Тульская область, ул. Маяковского 7</p>
+    <p>Телефон: 555-89</p>
+    <div class="socials">
+      <a href="https://t.me/pomosh71877bot" target="_blank">
+        <img src="tg 1.png" alt="Telegram">
+      </a>
+      <a href="https://vk.com/club229658316" target="_blank">
+        <img src="vk 1.png" alt="VK">
+      </a>
+      <img src="image4 1.png" alt="Mail">
+    </div>
+  </footer>
+
+  <!-- Кнопки -->
+  <button id="font-increase" style="
+    position: fixed;
+    top: 50px;
+    left: 10px;
+    z-index: 999;
+    padding: 8px 12px;
+    font-size: 2em;
+    background-color: rgb(253, 250, 250);
+    color: black;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  ">A+</button>
+
+  <!-- Модальное окно -->
+  <form action="https://formspree.io/f/mwkabcde" method="POST">
+  <label for="first_name">Имя</label>
+  <input type="text" name="first_name" id="first_name" required>
+
+  <label for="last_name">Фамилия</label>
+  <input type="text" name="last_name" id="last_name" required>
+
+  <label for="phone">Номер телефона</label>
+  <input type="tel" name="phone" id="phone" required>
+
+  <label for="email">Email</label>
+  <input type="email" name="email" id="email" required>
+
+  <label for="description">Опишите вашу ситуацию</label>
+  <textarea name="description" id="description" required></textarea>
+
+  <button type="submit">Отправить заявку</button>
+</form>
+
+
+  <!-- Скрипты -->
+  <script>
+    // Открыть модал
+    document.getElementById("openModal").addEventListener("click", function () {
+      document.getElementById("helpForm").style.display = "block";
+    });
+
+    // Закрыть модал
+    function closeModal() {
+      document.getElementById("helpForm").style.display = "none";
+    }
+
+    // Закрытие по клику вне формы
+    window.onclick = function (event) {
+      const modal = document.getElementById("helpForm");
+      if (event.target === modal) {
+        closeModal();
+      }
+    };
+  </script>
+<button id="theme-toggle" class="theme-toggle">🌙 Темная тема</button>
+  <script>
+    // Темная/светлая тема
+    const toggleButton = document.getElementById('theme-toggle');
+    toggleButton.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      toggleButton.textContent = document.body.classList.contains('dark-mode') ? '☀ Светлая тема' : '🌙 Темная тема';
+    });
+  </script>
+
+ 
+<script>
+  let utterance = null;
+
+  // Функция для озвучивания всей страницы
+  function speakPage() {
+    if (speechSynthesis.speaking) {
+      return; // Если уже идет озвучивание, ничего не делаем
+    }
+
+    // Создаем новый объект для озвучивания
+    utterance = new SpeechSynthesisUtterance();
+    utterance.lang = 'ru-RU';
+    utterance.rate = 1;
+    utterance.pitch = 1;
+
+    // Собираем текст для озвучивания
+    const pageText = Array.from(document.body.querySelectorAll('h1, h2, h3, p, li'))
+      .filter(el => !el.closest('.main-menu') && !el.closest('footer'))
+      .map(el => el.innerText)
+      .filter(text => text.trim().length > 0)
+      .join('. ');
+
+    utterance.text = pageText;
+
+    // Начинаем озвучивание
+    speechSynthesis.speak(utterance);
+
+    // Меняем текст кнопки на "Пауза"
+    document.getElementById("pauseButton").textContent = "❚❚ Пауза";
+
+    // Прослушиваем завершение озвучивания
+    utterance.onend = () => {
+      document.getElementById("pauseButton").textContent = "❚❚ Пауза"; // Сбросим кнопку после завершения
+    };
+  }
+
+  // Функция для переключения паузы и продолжения
+  function togglePause() {
+    if (speechSynthesis.speaking) {
+      if (speechSynthesis.paused) {
+        speechSynthesis.resume(); // Возобновить озвучивание
+        document.getElementById("pauseButton").textContent = "❚❚ Пауза"; // Меняем текст на "Пауза"
+      } else {
+        speechSynthesis.pause(); // Поставить на паузу
+        document.getElementById("pauseButton").textContent = "▶️ Продолжить"; // Меняем текст на "Продолжить"
+      }
+    }
+  }
+
+  // Вызов функции для начала озвучивания при загрузке страницы
+  window.addEventListener('load', speakPage);
+</script>
+
+<script>
+  let currentScale = 1;  // Начальный масштаб (100%)
+
+  document.getElementById("font-increase").addEventListener("click", () => {
+    currentScale += 0.1;  // Увеличиваем на 10% при каждом нажатии
+    document.documentElement.style.fontSize = currentScale + 'em';  // Меняем базовый размер шрифта для всей страницы
+  });
+</script>
+
+
+</body>
+</html>
